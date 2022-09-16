@@ -1,7 +1,9 @@
-<!-- <select>
-  <option *ngFor="let element of elementy"> {{ element }} </option>
-</select> -->
-
+<h4>Wszystkie miejsca:</h4>
 <ul>
   <li *ngFor="let miejsce of miejscaWyswietlane"> {{ miejsce.getOpis() }} </li>
 </ul>
+
+<h4>Wybierz miejsce, którego szczegóły chcesz wyświetlić</h4>
+<select>
+  <option *ngFor="let miejsce of miejscaWyswietlane"> {{ miejsce.getOpis() }} </option>
+</select>
