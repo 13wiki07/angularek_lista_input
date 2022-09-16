@@ -13,6 +13,16 @@ export class Miejsce {
         return this._opis;
     }
 
+    public setRankPlus() {
+        if(this._ranking < 10)
+            this._ranking++;
+    }
+
+    public setRankMinus() {
+        if(this._ranking > 0)
+            this._ranking--;
+    }
+
     public getRank() {
         return this._ranking;
     }

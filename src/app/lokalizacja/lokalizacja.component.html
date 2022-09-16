@@ -1,0 +1,14 @@
+<p>lokalizacja works!</p>
+{{ wybrany }}
+
+<h3>Wybrana lokalizacja</h3>
+<h5> {{ wybraneLokalizacje[wybrany].getOpis() }} </h5>
+
+<p>Ranking miejsca według Ciebie {{ wybraneLokalizacje[wybrany].getRank() }} </p>
+<button type="button" (click)="zwieksz()">Zwiększ ranking</button>
+<button type="button" (click)="zmniejsz()">Zmniejsz ranking</button>
+
+<p> {{ napis }} zdjęcie</p>
+<button (click)="zmien()"> {{ napis }} zdjęcie</button> <br>
+<img *ngIf="czyWidac" src="{{ wybraneLokalizacje[wybrany].getUrl() }}" width="200"> <br>
+{{ wybraneLokalizacje[wybrany].getOpis() }}

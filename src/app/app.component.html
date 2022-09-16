@@ -4,6 +4,11 @@
 </ul>
 
 <h4>Wybierz miejsce, którego szczegóły chcesz wyświetlić</h4>
-<select>
-  <option *ngFor="let miejsce of miejscaWyswietlane"> {{ miejsce.getOpis() }} </option>
+<select [(ngModel)]="indeksMiejsca">
+  <option *ngFor="let miejscowka of miejscaWyswietlane, let indeksMiejsca = index" value="{{ indeksMiejsca }}"> {{ miejscowka.getOpis() }} </option>
 </select>
+
+{{ indeksMiejsca}}
+<br>
+<img src="{{ wybraneMiejsce.getUrl() }}" alt=" {{ wybraneMiejsce.getOpis() }} " width="500">
+<app-lokalizacja [wybrany]="indeksMiejsca"></app-lokalizacja>

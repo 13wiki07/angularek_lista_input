@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'apka';
 
   miejscaWyswietlane: Miejsce [] = Miejsca.miejsca;
+  indeksMiejsca: number = 0;
+  wybraneMiejsce: Miejsce = this.miejscaWyswietlane[0];
   // elementy: string[] = [
   //   "London",
   //   "Berlin",
