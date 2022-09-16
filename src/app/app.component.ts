@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Miejsca } from './miejsca';
+import { Miejsce } from './miejsce';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'apka';
 
-  elementy: string[] = [
-    "London",
-    "Berlin",
-    "Paris"
-  ];
+  miejscaWyswietlane: Miejsce [] = Miejsca.miejsca;
+  // elementy: string[] = [
+  //   "London",
+  //   "Berlin",
+  //   "Paris"
+  // ];
 
 }
